@@ -30,14 +30,19 @@ app.get("/keiyo", (req, res) => {
 
 app.get("/keiyo2", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
-  res.render('keiyo2', { data: station2 });
+  res.render('db2', { data: station });
 });
 
-app.get("/keiyo2/:number", (req, res) => {
+app.get("/keiyo3", (req, res) => {
+  // 本来ならここにDBとのやり取りが入る
+  res.render('keiyo3', { data: station2 });
+});
+
+app.get("/keiyo3/:number", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   const number = req.params.number;
   const detail = station2[number];
-  res.render('keiyo2_detail', { data: detail });
+  res.render('keiyo3_detail', { data: detail });
 });
 
 app.get("/keiyo_add", (req, res) => {
@@ -47,6 +52,17 @@ app.get("/keiyo_add", (req, res) => {
   let newdata = { id: id, code: code, name: name };
   station.push(newdata);
   res.redirect('/public/yes.html');
+});
+
+app.get("/keiyo_add2", (req, res) => {
+  let id = req.query.id;
+  let code = req.query.code;
+  let name = req.query.name;
+  let change = req.query.change;
+  let distance = req.query.distance;
+  let newdata = { id: id, code: code, name: name, change: change, distance: distance };
+  station2.push(newdata);
+  res.redirect('/public/yes2.html');
 });
 
 
