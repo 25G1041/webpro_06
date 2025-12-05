@@ -1,0 +1,44 @@
+### タスクリスト
+
+- [ ] 覚悟を決める
+- [ ] 作るものを決める
+- [ ] 全体的な構想をまとめる
+- [ ] 開発者向け仕様書の作成
+  - [ ] プログラムを作る
+    - [ ] 対象とするシステムの決定 :thinking:
+    - [ ] データ構造の決定 :thinking:
+    - [ ] ページ構造の検討 :thinking:
+    - [ ] ページ遷移の検討 :thinking:
+    - [ ] HTTPメソッドとリソース名の決定
+    - [ ] ページ遷移図の作成 :writing_hand:
+    - [ ] ページ構造の決定
+    - [ ] ドキュメントの構成の検討 :thinking:
+    - [ ] 概要 :writing_hand:
+    - [ ] HTTPメソッドとリソース名一覧 :writing_hand:
+    - [ ] データ構造 :writing_hand:
+    - [ ] リソース名ごとの機能の詳細 :writing_hand:
+    - [ ] 動作確認を行う
+- [ ] 管理者向け仕様書の作成
+  - [ ] インストールから起動までの手順確認 :computer:
+  - [ ] インストール方法 :writing_hand:
+  - [ ] 起動方法 :writing_hand:
+  - [ ] 起動できない場合 :writing_hand:
+  - [ ] 終了方法 :writing_hand:
+  - [ ] 分かっている不具合 :writing_hand:
+- [ ] 利用者向け仕様書の作成
+  - [ ] 構成の検討 :thinking:
+  - [ ] スクリーンショットの保存と整理 :computer:
+  - [ ] 概要 :writing_hand:
+  - [ ] 使用できる機能 :writing_hand:
+  - [ ] 起動画面 :writing_hand:
+  - [ ] 一覧表示 :writing_hand:
+  - [ ] 詳細表示 :writing_hand:
+  - [ ] データ追加 :writing_hand:
+  - [ ] データ削除 :writing_hand:
+  - [ ] データ編集 :writing_hand:
+- [ ] 禁止事項に当てはまってないか確認 :warning:
+- [ ] 全体の確認 :warning:
+- [ ] 提出 :tada:
+- [ ] 成績の確認 :anguished:
+  - [ ] 落ちてないか確認
+  - [ ] 受かってたら最高 :100:
