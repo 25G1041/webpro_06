@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>情報工学科の専門科目</title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>科目名</td><td><%= data.name %></td></tr>
+    <tr><td>担当者</td><td><%= data.person %></td></tr>
+    <tr><td>場所</td><td><%= data.location %></td></tr>
+    <tr><td>個人的難易度</td><td><%= data.difficult %></td></tr>
+    <tr><td>評価方法</td><td><%= data.evaluation %></td></tr>
+  </table>
+  <a href="/subject">科目一覧に戻る</a>
+</body>
+</html>

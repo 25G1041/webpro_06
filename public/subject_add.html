@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>科目を追加する</title>
+</head>
+
+<body>
+    <form action="/subject_add">
+        <label for="semester">セメスター</label>
+        <input type="number" name="semester" id="semester" required><br>
+
+        <label for="name">科目名</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="person">担当者</label>
+        <input type="text" name="person" id="peson" required><br>
+
+        <label for="location">場所</label>
+        <input type="text" name="location" id="location" required><br>
+
+        <p>個人的難易度</p>
+        <input type="radio" name="difficult" id="rank_s" value="S">
+        <label for="rank_s">S (とても難しい)</label><br>
+        <input type="radio" name="difficult" id="rank_a" value="A">
+        <label for="rank_a">A (難しい)</label><br>
+        <input type="radio" name="difficult" id="rank_b" value="B">
+        <label for="rank_b">B (普通)</label><br>
+        <input type="radio" name="difficult" id="rank_c" value="C">
+        <label for="rank_c">C (簡単)</label><br>
+
+        <label for="evaluation">評価方法</label>
+        <input type="text" name="evaluation" id="evaluation" required><br>
+
+        <input type="submit" values="登録">
+    </form>
+    
+    <a href=/subject>戻れ</a>
+</body>
+
+</html>
