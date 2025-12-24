@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= data.name %>
+    </title>
+</head>
+
+<body>
+    <h2>
+        <%= data.name %> の編集
+    </h2>
+    <hr>
+
+    <form action="/party/update/<%= id %>" method="POST">
+
+        <label for="name">政党名</label><br>
+        <input type="text" name="name" id="name" value="<%= data.name %>" required><br>
+
+        <label for="reader">現在の党首</label><br>
+        <input type="text" name="reader" id="reader" value="<%= data.reader %>" required><br>
+
+        <label for="syu">衆議院の所属議員数</label><br>
+        <input type="number" name="syu" id="syu" value="<%= data.syu %>" required><br>
+
+        <label for="san">参議院の所属議員数</label><br>
+        <input type="number" name="san" id="san" value="<%= data.san %>" required><br>
+
+        <label for="year">結党年</label><br>
+        <input type="number" name="year" id="year" value="<%= data.year %>" required><br>
+
+        <label for="phrase">最新のキャッチフレーズ</label><br>
+        <input type="text" name="phrase" id="phrase" value="<%= data.phrase %>" required><br>
+
+        <label for="url">ホームページ(URL)</label><br>
+        <input type="text" name="url" id="url" value="<%= data.url %>" required><br>
+
+        <label>与党 / 野党（現在は: <%= data.which %>）</label><br>
+        <input type="radio" name="which" id="yotou" value="与党" <%= data.which === '与党' ? 'checked' : '' %>>
+        <label for="yotou">与党</label><br>
+        <input type="radio" name="which" id="yatou" value="野党" <%= data.which === '野党' ? 'checked' : '' %>>
+        <label for="yatou">野党</label><br>
+
+        <input type="submit" value="更新">
+    </form>
+
+    <a href="/party">政党一覧に戻る</a>
+</body>
+
+</html>

@@ -2,21 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title><%= data.name %></title>
+  <title>情報工学科の専門科目</title>
 </head>
 <body>
-  <h2>情報工の専門科目一覧</h2>
-  <table>
-    <tr><th>科目名</th></tr>
+  <h2>情報工学科の専門科目一覧</h2>
+  <hr>
+  <table border="1">
+    <tr><th>セメスター</th><th>科目名</th></tr>
       <% let number=0 %>
       <% for( let row of data ) { %>
-        <tr><td><%= row.semester %></td>
+        <tr><td><%= row.semester %>S</td>
         <td><a href="/subject/<%= number %>"><%= row.name %></a></td></tr>
         <% number += 1 %>
       <% } %>
   </table>
 
-  <a href=/public/subject_add.html>登録</a>
+  <a href="/subject/create">登録</a>
 
 </body>
 </html>

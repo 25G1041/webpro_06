@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>政党の追加</title>
+    <style>
+        .表示 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>科目の追加</h2>
+    <hr>
+    <form action="/party" method="POST">
+        <label for="name" class="表示">政党名</label><br>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="reader" class="表示">現在の党首</label><br>
+        <input type="text" name="reader" id="reader" required><br>
+
+        <label for="syu" class="表示">衆議院の所属議員数</label><br>
+        <input type="text" name="syu" id="syu" required><br>
+
+        <label for="san" class="表示">参議院の所属議員数</label><br>
+        <input type="text" name="san" id="san" required><br>
+
+        <label for="year" class="表示">結党年</label><br>
+        <input type="number" name="year" id="year" required><br>
+
+        <label for="phrase" class="表示">最新のキャッチフレーズ</label><br>
+        <input type="text" name="phrase" id="phrase" required><br>
+
+        <label for="url" class="表示">ホームページ(URL)</label><br>
+        <input type="text" name="url" id="url" required><br>
+
+        <label class="表示">与党/野党</label><br>
+
+        <input type="radio" name="which" id="yotou" value="与党">
+        <label for="yotou">与党</label><br>
+        <input type="radio" name="which" id="yatou" value="野党">
+        <label for="yatou">野党</label><br>
+
+        <input type="submit" value="登録">
+    </form>
+
+    <a href=/party>戻れ</a>
+</body>
+
+</html>

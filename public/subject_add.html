@@ -3,24 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>科目を追加する</title>
+    <title>科目の追加</title>
+    <style>
+        .表示 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #222;
+        }
+    </style>
 </head>
 
 <body>
-    <form action="/subject_add">
-        <label for="semester">セメスター</label>
+    <h2>科目の追加</h2>
+    <hr>
+    <form action="/subject" method="POST">
+        <label for="semester" class="表示">セメスター</label><br>
         <input type="number" name="semester" id="semester" required><br>
 
-        <label for="name">科目名</label>
+        <label for="name" class="表示">科目名</label><br>
         <input type="text" name="name" id="name" required><br>
 
-        <label for="person">担当者</label>
-        <input type="text" name="person" id="peson" required><br>
+        <label for="person" class="表示">担当者</label><br>
+        <input type="text" name="person" id="person" required><br>
 
-        <label for="location">場所</label>
+        <label class="表示">キャンパス</label><br>
+        
+        <input type="radio" name="campus" id="sinnara" value="新習志野">
+        <label for="sinnnara">新習志野</label><br>
+        <input type="radio" name="campus" id="tudanuma" value="津田沼">
+        <label for="tudanuma">津田沼</label><br>
+
+        <label for="location" class="表示">場所</label><br>
         <input type="text" name="location" id="location" required><br>
 
-        <p>個人的難易度</p>
+        <label  class="表示">個人的難易度</label><br>
+
         <input type="radio" name="difficult" id="rank_s" value="S">
         <label for="rank_s">S (とても難しい)</label><br>
         <input type="radio" name="difficult" id="rank_a" value="A">
@@ -30,10 +47,13 @@
         <input type="radio" name="difficult" id="rank_c" value="C">
         <label for="rank_c">C (簡単)</label><br>
 
-        <label for="evaluation">評価方法</label>
-        <input type="text" name="evaluation" id="evaluation" required><br>
+        <label for="evaluation" class="表示">評価方法(複数選択可)</label><br>
+        <input type="checkbox" name="evaluation" value="中間"> 中間
+        <input type="checkbox" name="evaluation" value="期末"> 期末
+        <input type="checkbox" name="evaluation" value="レポート"> レポート<br>
 
-        <input type="submit" values="登録">
+
+        <input type="submit" value="登録">
     </form>
     
     <a href=/subject>戻れ</a>

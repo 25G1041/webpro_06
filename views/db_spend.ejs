@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>課金一覧</title>
+</head>
+<body>
+  <h2>課金一覧</h2>
+  <hr>
+  <table border="1">
+    <tr><th>ゲーム名</th><th>日付</th><th>詳細</th></tr>
+      <% let number=0 %>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.game %></td>
+            <td><%= row.day %></td>
+            <td><a href="/spend/<%= number %>">詳細</a></td>
+        </tr>
+
+        <% number += 1 %>
+      <% } %>
+  </table>
+
+  <a href="/spend/create">登録</a>
+
+</body>
+</html>
+

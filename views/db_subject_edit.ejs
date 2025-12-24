@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <hr>
+  
+  <form action="/subject/update/<%= id %>" method="POST">
+
+        <label for="semester">セメスター</label><br>
+        <input type="number" name="semester" id="semester" value="<%= data.semester %>" required><br>
+    
+        <label for="name">科目名</label><br>
+        <input type="text" name="name" id="name" value="<%= data.name %>" required><br>
+    
+        <label for="person">担当者</label><br>
+        <input type="text" name="person" id="person" value="<%= data.person %>" required><br>
+    
+        <label>キャンパス (現在は: <%= data.campus %>)</label><br>
+        <input type="radio" name="campus" id="sinnara" value="新習志野" <%=data.campus==='新習志野' ? 'checked' : '' %>>
+        <label for="sinnara">新習志野</label><br>
+        <input type="radio" name="campus" id="tudanuma" value="津田沼" <%=data.campus==='津田沼' ? 'checked' : '' %>>
+        <label for="tudanuma">津田沼</label><br>
+
+        <label for="location">場所</label><br>
+        <input type="text" name="location" id="location" value="<%= data.location %>" required><br>
+    
+        <label>個人的難易度 (現在は: <%= data.difficult %>)</label><br>
+        <input type="radio" name="difficult" id="rank_s" value="S" <%= data.difficult === 'S' ? 'checked' : '' %>>
+        <label for="rank_s">S (とても難しい)</label><br>
+        <input type="radio" name="difficult" id="rank_a" value="A" <%= data.difficult === 'A' ? 'checked' : '' %>>
+        <label for="rank_a">A (難しい)</label><br>
+        <input type="radio" name="difficult" id="rank_b" value="B" <%= data.difficult === 'B' ? 'checked' : '' %>>
+        <label for="rank_b">B (普通)</label><br>
+        <input type="radio" name="difficult" id="rank_c" value="C" <%= data.difficult === 'C' ? 'checked' : '' %>>
+        <label for="rank_c">C (簡単)</label><br>
+    
+        <label for="evaluation">評価方法 (現在は: <%= data.evaluation %>)</label><br>
+        <input type="checkbox" name="evaluation" value="中間" <%= data.evaluation.includes('中間') ? 'checked' : '' %>> 中間
+        <input type="checkbox" name="evaluation" value="期末" <%= data.evaluation.includes('期末') ? 'checked' : '' %>> 期末
+        <input type="checkbox" name="evaluation" value="レポート" <%= data.evaluation.includes('レポート') ? 'checked' : '' %>> レポート<br>
+
+    <input type="submit" value="更新">
+  </form>
+  <a href="/subject">科目一覧に戻る</a>
+</body>
+</html>

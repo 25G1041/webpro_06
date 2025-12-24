@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>課金の追加</title>
+    <style>
+        .表示 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>課金の追加</h2>
+    <hr>
+    <form action="/spend" method="POST">
+        <label for="game" class="表示">ゲーム名</label><br>
+        <input type="text" name="game" id="game" required><br>
+        
+        <label for="money" class="表示">使用金額（円）</label><br>
+        <input type="number" name="money" id="money" required><br>
+        
+        <label for="reason" class="表示">用途</label><br>
+        <input type="text" name="reason" id="reason" require><br>
+        
+        <label for="day" class="表示">日付</label><br>
+        <input type="date" name="day" id="day" required><br>
+        
+        <label class="表示">満足度（S〜C）</label><br>
+        <input type="radio" name="satisfaction" id="rank_s" value="S" required>
+        <label for="rank_s">S</label><br>
+        
+        <input type="radio" name="satisfaction" id="rank_a" value="A">
+        <label for="rank_a">A</label><br>
+        
+        <input type="radio" name="satisfaction" id="rank_b" value="B">
+        <label for="rank_b">B</label><br>
+        
+        <input type="radio" name="satisfaction" id="rank_c" value="C">
+        <label for="rank_c">C</label><br>
+        
+        <label for="remarks" class="表示">備考</label><br>
+        <input type="text" name="remarks" id="remarks"><br>
+
+        <input type="submit" value="登録">
+    </form>
+
+    <a href=/spend>戻れ</a>
+</body>
+
+</html>

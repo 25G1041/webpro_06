@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>日本の主要な政党</title>
+</head>
+<body>
+  <h2>日本の主要な政党一覧</h2>
+  <hr>
+  <table border="1">
+    <tr><th>政党名</th></tr>
+      <% let number=0 %>
+      <% for( let row of data ) { %>
+        <tr><td><a href="/party/<%= number %>"><%= row.name %></a></td></tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+
+  <a href="/party/create">登録</a>
+
+</body>
+</html>
+

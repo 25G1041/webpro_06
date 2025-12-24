@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %>の詳細</title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <hr>
+  <table border="1">
+    <tr><th align="center">項目</th><th align="center">データ</th></tr>
+    <tr><td>政党名</td><td><%= data.name %></td></tr>
+    <tr><td>現在の党首</td><td><%= data.reader %></td></tr>
+    <tr><td>衆議院の所属議員数</td><td><%= data.syu %></td></tr>
+    <tr><td>参議院の所属議員数</td><td><%= data.san %></td></tr>
+    <tr><td>結党年</td><td><%= data.year %></td></tr>
+    <tr><td>最新のキャッチフレーズ</td><td><%= data.phrase %></td></tr>
+
+<tr>
+  <td>ホームページ(URL)</td>
+  <td>
+    <a href="<%= data.url %>" target="_blank" onclick="return confirm('外部サイト（<%= data.name %>のHP）に移動します。\nよろしいですか？')">
+      <%= data.url %>
+    </a>
+  </td>
+</tr>
+
+    <tr><td>与党/野党</td><td><%= data.which %></td></tr>
+    
+  </table>
+  <a href="/party/edit/<%= id %>">編集</a><br>
+  <a href="/party/delete/<%= id %>">削除</a><br>
+  <a href="/party">科目一覧に戻る</a>
+</body>
+</html>
