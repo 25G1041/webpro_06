@@ -21,7 +21,7 @@ let subject = [
 //一覧
 app.get("/subject", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
-  res.render('db_subject', { data: subject });
+  res.render('subject', { data: subject });
 });
 
 //Create
@@ -34,7 +34,7 @@ app.get("/subject/:number", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   const number = req.params.number;
   const detail = subject[number];
-  res.render('db_subject_detail', { id: number, data: detail });
+  res.render('subject_detail', { id: number, data: detail });
 });
 
 // Delete
@@ -71,7 +71,7 @@ app.get("/subject/edit/:number", (req, res) => {
   const number = req.params.number;
   const detail = subject[number];
 
-  res.render('db_subject_edit', { id: number, data: detail });
+  res.render('subject_edit', { id: number, data: detail });
 });
 
 // Update
@@ -107,7 +107,7 @@ let party = [
 //一覧
 app.get("/party", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
-  res.render('db_party', { data: party });
+  res.render('party', { data: party });
 });
 
 //Create
@@ -120,7 +120,7 @@ app.get("/party/:number", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   const number = req.params.number;
   const detail = party[number];
-  res.render('db_party_detail', { id: number, data: detail });
+  res.render('party_detail', { id: number, data: detail });
 });
 
 // Delete
@@ -155,7 +155,7 @@ app.get("/party/edit/:number", (req, res) => {
   const number = req.params.number;
   const detail = party[number];
 
-  res.render('db_party_edit', { id: number, data: detail });
+  res.render('party_edit', { id: number, data: detail });
 });
 
 // Update
@@ -184,7 +184,7 @@ let spend = [
 //一覧
 app.get("/spend", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
-  res.render('db_spend', { data: spend });
+  res.render('spend', { data: spend });
 });
 
 //Create
@@ -197,7 +197,7 @@ app.get("/spend/:number", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   const number = req.params.number;
   const detail = spend[number];
-  res.render('db_spend_detail', { id: number, data: detail });
+  res.render('spend_detail', { id: number, data: detail });
 });
 
 // Delete
@@ -229,7 +229,7 @@ app.get("/spend/edit/:number", (req, res) => {
   const number = req.params.number;
   const detail = spend[number];
 
-  res.render('db_spend_edit', { id: number, data: detail });
+  res.render('spend_edit', { id: number, data: detail });
 });
 
 // Update

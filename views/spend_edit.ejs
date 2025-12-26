@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%= data.game %>の<%= data.day %>の課金
+    </title>
+</head>
+
+<body>
+    <h2>
+        <%= data.game %>の<%= data.day %>の課金の編集
+    </h2>
+    <hr>
+
+    <form action="/spend/update/<%= id %>" method="POST">
+    
+        <label for="game">ゲーム名</label><br>
+        <input type="text" name="game" id="game" value="<%= data.game %>" required><br>
+    
+        <label for="money">使用金額</label><br>
+        <input type="number" name="money" id="money" value="<%= data.money %>" required><br>
+    
+        <label for="reason">使った理由</label><br>
+        <input type="text" name="reason" id="reason" value="<%= data.reason %>" required><br>
+    
+        <label for="day">使用日</label><br>
+        <input type="date" name="day" id="day" value="<%= data.day %>" required><br>
+    
+        <label>満足度（現在は: <%= data.satisfaction %>）</label><br>
+        <input type="radio" name="satisfaction" id="rank_s" value="S" <%=data.satisfaction==='S' ? 'checked' : '' %>>
+        <label for="rank_s">S</label><br>
+        <input type="radio" name="satisfaction" id="rank_a" value="A" <%=data.satisfaction==='A' ? 'checked' : '' %>>
+        <label for="rank_a">A</label><br>
+        <input type="radio" name="satisfaction" id="rank_b" value="B" <%=data.satisfaction==='B' ? 'checked' : '' %>>
+        <label for="rank_b">B</label><br>
+        <input type="radio" name="satisfaction" id="rank_c" value="C" <%=data.satisfaction==='C' ? 'checked' : '' %>>
+        <label for="rank_c">C</label><br>
+    
+        <label for="remarks">備考</label><br>
+        <input type="text" name="remarks" id="remarks" value="<%= data.remarks %>"><br>
+    
+        <input type="submit" value="更新">
+    </form>
+    <a href="/spend">課金一覧に戻る</a>
+</body>
+
+</html>

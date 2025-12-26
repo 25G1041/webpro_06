@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.game %>の<%= data.day %>の課金詳細</title>
+</head>
+<body>
+  <h2><%= data.game %>の<%= data.day %>の課金詳細</h2>
+  <hr>
+  <table border="1">
+  <tr><th align="center">項目</th><th align="center">データ</th></tr>
+  <tr><td>ゲーム名</td><td><%= data.game %></td></tr>
+  <tr><td>使用金額</td><td><%= data.money %>円</td></tr>
+  <tr><td>使用理由</td><td><%= data.reason %></td></tr>
+  <tr><td>使用日</td><td><%= data.day %></td></tr>
+  <tr><td>満足度</td><td><%= data.satisfaction %></td></tr>
+  <tr><td>備考</td><td><%= data.remarks %></td></tr>
+
+</table>
+  <a href="/spend/edit/<%= id %>">編集</a><br>
+  <a href="/spend/delete/<%= id %>">削除</a><br>
+  <a href="/spend">課金一覧に戻る</a>
+</body>
+</html>

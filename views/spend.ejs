@@ -9,12 +9,14 @@
   <hr>
   <table border="1">
     <tr><th>ゲーム名</th><th>日付</th><th>詳細</th></tr>
+      <% let number=0 %>
       <% for( let row of data ) { %>
-        <tr>
-            <td><%= row.game %></td>
+        <tr><td><%= row.game %></td>
             <td><%= row.day %></td>
-            <td><a href="/spend/<%= row.id %>">詳細</a></td>
+            <td><a href="/spend/<%= number %>">詳細</a></td>
         </tr>
+
+        <% number += 1 %>
       <% } %>
   </table>
 
@@ -22,3 +24,4 @@
 
 </body>
 </html>
+
