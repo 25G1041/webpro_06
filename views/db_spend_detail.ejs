@@ -18,7 +18,7 @@
 
 </table>
   <a href="/spend/edit/<%= id %>">編集</a><br>
-  <a href="/spend/delete/<%= id %>">削除</a><br>
+  <a href="/spend/delete/<%= id %>" onclick="return confirm('本当に削除しますか？');">削除</a><br>
   <a href="/spend">課金一覧に戻る</a>
 </body>
 </html>

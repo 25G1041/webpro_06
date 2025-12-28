@@ -18,7 +18,7 @@
     <tr><td>評価方法</td><td><%= data.evaluation %></td></tr>
   </table>
   <a href="/subject/edit/<%= id %>">編集</a><br>
-  <a href="/subject/delete/<%= id %>">削除</a><br>
+  <a href="/subject/delete/<%= id %>" onclick="return confirm('本当に削除しますか？');">削除</a><br>
   <a href="/subject">科目一覧に戻る</a>
 </body>
 </html>
